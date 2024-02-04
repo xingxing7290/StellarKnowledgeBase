@@ -1,3 +1,4 @@
+
 # Docsify_memory
 基于docsify的个人知识仓库
 
@@ -9,25 +10,28 @@ https://docsify.js.org
 ## node 环境部署 （华为云：Ubuntu 20.0）
 
 在 root 目录下创建 node 文件夹
-    ` mkdir  node `
-    `  cd node `
+    mkdir  node
+    cd node
+    
 下载 解压
-   ` wget https://nodejs.org/dist/v12.16.3/node-v12.16.3-linux-x64.tar.xz `
-    ` tar xf node-v12.16.3-linux-x64.tar.xz `
+
+` wget https://nodejs.org/dist/v12.16.3/node-v12.16.3-linux-x64.tar.xz `
+   
+` tar xf node-v12.16.3-linux-x64.tar.xz `
 
 可以查看当前目录下的文件，执行：ls （命令）
 
 解压成功后可以选择删除压缩包：
-    ` rm -rf node-v14.17.4-linux-x64.tar.xz ` 
+` rm -rf node-v14.17.4-linux-x64.tar.xz ` 
 其中：-f 会提醒是否删除 ；-rf 会强制删除，不会提醒。（使用 rf，因为有些人不知道如何操作等待回车的对话线）
 创建目录
-    ` mkdir /usr/local/lib/node `
+` mkdir /usr/local/lib/node `
     
 如果目录已经存在，则无需创建，也可以根据自己的喜好设置目录名称
 
 移动目录并重命名
 
-    ` mv node-v12.16.3-linux-x64 /usr/local/lib/node/nodejs `
+ ` mv node-v12.16.3-linux-x64 /usr/local/lib/node/nodejs `
 
 设置环境变量(注意：这一步需要管理员权限或者对该文件的写入权限。)
 执行：
@@ -37,8 +41,8 @@ https://docsify.js.org
 输入 i 即可对文件进行编辑。
 在文件底部添加环境变量：
 
-   ` export NODEJS_HOME=/usr/local/lib/node/nodejs `
-    `  export PATH=$NODEJS_HOME/bin:$PATH `
+` export NODEJS_HOME=/usr/local/lib/node/nodejs `
+`  export PATH=$NODEJS_HOME/bin:$PATH `
 
 执行命令（下方清单命令为保存退出）：
 
@@ -47,16 +51,16 @@ https://docsify.js.org
 
 刷新修改
 
-    `  source /etc/profile `
+`  source /etc/profile `
 
 安装完成，查看版本号
 node版本号：
 
-    `  node -v `
+`  node -v `
 
 npm版本号：
 
-    `  npm -v `
+ `  npm -v `
 
 
 
@@ -82,6 +86,7 @@ npm版本号：
 可以参考指令说明
 
 https://github.com/docsifyjs/docsify-cli
+
 
 
 
