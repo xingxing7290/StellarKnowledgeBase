@@ -20,14 +20,11 @@
       alias: {
       '/.*/_sidebar.md': '/_sidebar.md'
       },
+      notFoundPage: true,
+      notFoundPage: '404.md',
       // 全文搜索 - Search
       search: 'auto', // 默认值
-      search : [
-      '/',            // => /README.md
-      '/sidebar/',       // => /guide.md
-      '/tool/', // => /get-started.md
-      '/README.md',      // => /zh-cn/README.md
-    ],
+
     }
   </script>
   <!-- Docsify v4 -->
@@ -42,6 +39,9 @@
   <!-- 代码高亮 -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
-
+  <!-- 在你的 index.html 文件中的 </body> 标签之前添加以下脚本 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 全局搜索 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>
