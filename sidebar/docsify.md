@@ -93,14 +93,14 @@ npm版本号：
 
 ## docsify
 
-<https://zhuanlan.zhihu.com/p/525653345>
-<https://pp-tt.github.io/>
-<https://r2coding.com/#/>
+- <https://zhuanlan.zhihu.com/p/525653345>
+- <https://pp-tt.github.io/>
+- <https://r2coding.com/#/>
 
 ## other
 
-<https://www.yuque.com/xiaoyang-wyxle>
-博客园 <https://www.cnblogs.com/guangzan>
-[博客园](https://www.cnblogs.com/gshang/p/biliTheme.html)
-[个人简历网页搭建](https://blog.csdn.net/qq_41854911/article/details/118502772)
-[HTML5制作网页版个人简历](https://blog.csdn.net/o_b_j_e_c_t/article/details/115796802)
+- <https://www.yuque.com/xiaoyang-wyxle>
+- [博客园] <https://www.cnblogs.com/guangzan>
+- [博客园](https://www.cnblogs.com/gshang/p/biliTheme.html)
+- [个人简历网页搭建](https://blog.csdn.net/qq_41854911/article/details/118502772)
+- [HTML5制作网页版个人简历](https://blog.csdn.net/o_b_j_e_c_t/article/details/115796802)
