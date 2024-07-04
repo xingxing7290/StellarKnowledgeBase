@@ -7,32 +7,41 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-
-
 </head>
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      loadSidebar: true,
-      subMaxLevel: 3,
-      loadNavbar: true,
-      name: '软石科技',
+      name: '',
       repo: '',
-      search: 'auto'
-    }</script>
-
-
+      coverpage:true,
+      loadSidebar:true,
+      subMaxLevel: 1,
+      alias: {
+      '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      // 全文搜索 - Search
+      search: 'auto', // 默认值
+      search : [
+      '/',            // => /README.md
+      '/sidebar/',       // => /guide.md
+      '/tool/', // => /get-started.md
+      '/README.md',      // => /zh-cn/README.md
+    ],
+    }
+  </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <!-- emoji插件 -->
+  <!-- emoji -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-  <!-- 图片缩放 -->
+  <!-- 图片缩放 - Zoom image -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <!-- 复制到剪贴板 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- 全局搜索 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 代码高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
 
 </body>
 </html>
