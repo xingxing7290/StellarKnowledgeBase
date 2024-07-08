@@ -20,6 +20,7 @@
 
 ## 工具集
 
+- [菜鸟工具](https://www.jyshare.com/)
 - [在线运行](https://www.it1352.com/OnLineTools/Index)
 - [七七工具箱](https://www.tool77.com/)
 - [在线工具](https://tool.lu/)
@@ -35,3 +36,11 @@
 - [阿里云物联网工程师ACA认证](https://edu.aliyun.com/certification/aca04?spm=5176.11999222.1216633.5.8c0c5e9bJ0d4MO)
 - [华为认证](https://forum.huawei.com/enterprise/zh/forums/580879801705705472/580879816163471360)
 - [牛客](https://www.nowcoder.com/)
+
+## 学习资源
+
+- [中国大学慕课](https://www.icourse163.org/)
+- [阿里云大学](https://edu.aliyun.com/)
+- [w3cschool](https://www.w3cschool.cn/)
+- [廖雪峰的官方网站](https://www.liaoxuefeng.com/)
+- [阿发你好](https://afanihao.cn/java)

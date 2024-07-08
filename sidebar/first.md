@@ -1,8 +1,8 @@
 # 这是首页
 
- :100:
+:100:
 
-```
+```C
 #include <stdui.h>
 int main(void )
 {
