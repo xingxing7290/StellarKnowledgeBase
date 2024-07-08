@@ -8,3 +8,6 @@
 * 项目技术
   * [FFmpeg](/project_technical/FFmpeg/ffmpeg.md)
   * [Qemu](/project_technical/Qemu/qemu.md)
+
+* 嵌入式成长手册
+  * [面试](/Embedded/interview/interview.md)
