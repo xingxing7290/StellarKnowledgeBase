@@ -7,10 +7,12 @@
 
 * 项目技术
   * [FFmpeg](/project_technical/FFmpeg/ffmpeg.md)
-  * [Qemu](/project_technical/Qemu/qemu.md)
+  * [Qemu]
+    * [linux](/project_technical/Qemu/qemu.md)
+    * [windows](/project_technical/Qemu/win10qemu.md)
   * [Android](/project_technical/Android/android.md)
-      * [NFC](/project_technical/Android/NFC/NFC.md)
-      * [USB](/project_technical/Android/USB/USB.md)
+    * [NFC](/project_technical/Android/NFC/NFC.md)
+    * [USB](/project_technical/Android/USB/USB.md)
 
 * 嵌入式成长手册
   * [面试](/Embedded/interview/interview.md)
