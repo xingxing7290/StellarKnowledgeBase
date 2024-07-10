@@ -7,9 +7,7 @@
 
 * 项目技术
   * [FFmpeg](/project_technical/FFmpeg/ffmpeg.md)
-  * [Qemu]
-    * [linux](/project_technical/Qemu/qemu.md)
-    * [windows](/project_technical/Qemu/win10qemu.md)
+  * [Qemu](/project_technical/Qemu/qemu.md)
   * [Android](/project_technical/Android/android.md)
     * [NFC](/project_technical/Android/NFC/NFC.md)
     * [USB](/project_technical/Android/USB/USB.md)

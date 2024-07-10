@@ -35,13 +35,11 @@ ffplay.exe 与ffmpeg.exe的命令行指令
 
 一个视频3分51秒 也就是3*60+51=231秒
 
-帧率为29.970   
+帧率为29.970
 
   29.97*231 =  6923.07  指令读取出来的帧数是6948
 
 相差25帧不到一秒
-
- 
 
 ```c
 ffprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 test.flv
@@ -57,9 +55,8 @@ ffprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_read_
 
 在es中导入的帧总数为6947帧
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/a65c9f14-899c-4ef0-84a4-66e67cccca0d/033fc958-64ca-488d-af23-631724a2ed14/Untitled.png)
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/a65c9f14-899c-4ef0-84a4-66e67cccca0d/b1da033b-ad72-4da0-844d-8fc793019f0c/Untitled.png)
+![alt text](image-15.png)
+![alt text](image-16.png)
 
 根据计算
 
