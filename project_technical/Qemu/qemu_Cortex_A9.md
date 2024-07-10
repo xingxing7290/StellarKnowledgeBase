@@ -544,3 +544,29 @@ int main(void)
 }
 
 ```
+
+arm-linux-gnueabihf和arm-linux-gnueabi是交叉编译工具链的名称，用于在主机系统上编译针对ARM架构的目标代码。
+
+区别如下：
+
+ABI（Application Binary Interface）：区别之一是它们使用的ABI。arm-linux-gnueabihf使用硬浮点ABI（Hard Float ABI），而arm-linux-gnueabi使用软浮点ABI（Soft Float ABI）。
+
+硬浮点ABI（gnueabihf）：使用硬件浮点寄存器（FPU）来进行浮点计算，提供更高的性能。
+软浮点ABI（gnueabi）：将浮点计算委托给软件库来处理，适用于没有硬件浮点支持的处理器。
+编译器选项：arm-linux-gnueabihf和arm-linux-gnueabi工具链使用不同的编译器选项和默认设置，以适应相应的ABI。
+
+一般来说，如果您的目标设备支持硬件浮点运算（具有FPU），则建议使用arm-linux-gnueabihf工具链。这样可以利用硬件浮点支持，获得更好的性能。如果您的目标设备不支持硬件浮点运算，或者您希望与使用软浮点ABI的其他组件兼容，那么可以使用arm-linux-gnueabi工具链。
+
+vexpressA9是一款基于ARM Cortex-A9处理器的开发板。它由ARM公司提供，用于开发和评估ARM Cortex-A9处理器及其相关技术。
+
+ARM Cortex-A9是一款高性能的32位多核处理器设计，属于ARM的Cortex-A系列处理器之一。它采用了ARM架构的ARMv7指令集，并具有高度集成的特性，适用于广泛的应用领域，包括移动设备、嵌入式系统、网络设备和消费类电子产品等。
+
+区别：
+
+目标用途：vexpressA9是一款开发板，旨在为开发人员提供一个用于软件开发、系统调试和性能评估的平台。而ARM Cortex-A9是一款处理器设计，用于嵌入式系统和移动设备等领域的产品中。
+
+硬件实现：vexpressA9是一个具体的硬件开发板，包含了ARM Cortex-A9处理器和其他外围设备，如内存、接口等。ARM Cortex-A9则是一个处理器核心的设计，可以被实现在不同的硬件平台上。
+
+可定制性：vexpressA9开发板的设计通常提供了丰富的可定制性，包括额外的接口、扩展插槽和其他功能，以适应不同的开发需求。而ARM Cortex-A9的设计本身提供了一组基本的处理器功能，但具体的外围设备和接口可以根据具体系统的需求进行定制。
+
+总之，vexpressA9是一款基于ARM Cortex-A9处理器的开发板，用于软件开发和系统调试；而ARM Cortex-A9是一款处理器核心的设计，可实现在各种嵌入式和移动设备中。
