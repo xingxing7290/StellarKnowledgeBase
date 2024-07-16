@@ -10,5 +10,6 @@
 项目文件参见：
 <https://github.com/xingxing7290/ffplay_dll>
 
+- [ffplay移植linux](/project_technical/FFmpeg/linux.md)
 - [ffplay](/project_technical/FFmpeg/FFplay.md)
 - [参考网址](/project_technical/FFmpeg/background.md)
