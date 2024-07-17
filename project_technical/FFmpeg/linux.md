@@ -1,5 +1,11 @@
 # 将FFplay 移植到Linux中实现音频播放 交叉编译
 
+## 编译更改过功能的so动态库
+
+```sh
+linux20@ubuntu:~/ffplay/test$ arm-openwrt-linux-gnueabi-gcc -o dll.so dll.c -I/home/linux20/ffplay/ffmpeg-4.4.4/_install/include -I /home/linux20/ffplay/test/ -L/home/linux20/ffplay/ffmpeg-4.4.4/_install/lib -L /home/linux20/ffplay/test/ -lpthread -shared -fPIC
+```
+
 ## 安装X264
 
 <https://www.videolan.org/developers/x264.html>
@@ -83,11 +89,14 @@ sudo PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/game
 
 ## alsa 移植
 
+![alt text](image-18.png)
+![alt text](image-19.png)
+
 ## 目标机运行
 
 生成库程序，编写测试程序进行测试
 
-```
+```c
 #include "ffplay.h"
 #include "dll.h"
 //int play(char fileName[], int setframe) ;
@@ -99,13 +108,12 @@ int main(int argc, char* argv[])
         printf("Usage: %s <filename>\n", argv[0]);
         return 1;
     }
-	//char fileName[]="/usr/bin/APP/test.mp4";
     char* fileName = argv[1];
     printf("play %s\n", fileName);
     int ret = play(fileName, 0);
     printf("play begin ret = %d\n", ret);
-	int ret2=isVideoWithAudio(fileName);
-	printf("isVideoWithAudio %d \n",ret2);
+ int ret2=isVideoWithAudio(fileName);
+printf("isVideoWithAudio %d \n",ret2);
     while (1)
     {
         // 这里可以添加你的逻辑代码
