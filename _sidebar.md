@@ -2,8 +2,8 @@
 
 * [指南](/sidebar/docsify.md)
 * 工具
-  * [:cn:收藏网页](/tool/web_pages.md)
-  * [:us: :uk: 开发工具](/tool/development_tools.md)
+  * [收藏网页](/tool/web_pages.md)
+  * [开发工具](/tool/development_tools.md)
 
 * 项目技术
   * [FFmpeg](/project_technical/FFmpeg/ffmpeg.md)
@@ -14,3 +14,6 @@
 
 * 嵌入式成长手册
   * [面试](/Embedded/interview/interview.md)
+  * [简历](/Embedded/resume/resume.md)
+
+* [技能学习](/skill_learn/skill_learning.md)

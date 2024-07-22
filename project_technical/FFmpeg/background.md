@@ -76,3 +76,5 @@ FFmpeg 命令实战：ffmpeg.c
 [嵌入式linux下的FFmpeg交叉编译（最全面）-CSDN博客](https://blog.csdn.net/yyz_1987/article/details/131076072)
 
 [交叉编译ffmpeg2.4.14 SDL1.2.15 alsa-1.1.4.1 播放音频_交叉编译sdl1.2.15库-CSDN博客](https://blog.csdn.net/shzwfq/article/details/86692918)
+
+[FFmpeg基本原理](https://ffmpeg.xianwaizhiyin.net/)
