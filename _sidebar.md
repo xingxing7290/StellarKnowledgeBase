@@ -15,5 +15,4 @@
 * 嵌入式成长手册
   * [面试](/Embedded/interview/interview.md)
   * [简历](/Embedded/resume/resume.md)
-
-* [技能学习](/skill_learn/skill_learning.md)
+  * [技能学习](/skill_learn/skill_learning.md)

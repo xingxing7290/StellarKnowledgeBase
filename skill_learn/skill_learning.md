@@ -1,3 +1,3 @@
 # skill learning
 
-- [C++](/skill_learn/C++.md)
+- [C++](/skill_learn/C++/C++.md)
