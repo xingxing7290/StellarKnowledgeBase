@@ -2,4 +2,4 @@
 
 > An awesome project.
 
-[链接](https://xingxing7290.github.io/Docsify_memory/)
+[链接](https://xingxing7290.github.io/StellarKnowledgeBase)
