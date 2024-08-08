@@ -9,3 +9,19 @@
 4. [示例](/Embedded/interview/interview3.md)
 
 5. [示例](/Embedded/interview/interview4.md)
+
+<!-- tabs:start -->
+
+#### **English**
+
+Hello!
+
+#### **French**
+
+Bonjour!
+
+#### **Italian**
+
+Ciao!
+
+<!-- tabs:end -->
