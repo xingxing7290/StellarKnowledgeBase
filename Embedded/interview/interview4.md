@@ -5,6 +5,8 @@
 ```C
 #define SECONDS_IN_A_YEAR (365 * 24 * 60 * 60)
 unsigned long seconds_in_a_year = SECONDS_IN_A_YEAR;
+
+#define SECONDS_PER_YEAR (60 * 60 * 24 * 365)UL
 ```
 
 - 2 写一个“标准”宏MIN，这个宏输入两个参数并返回一个最小值
