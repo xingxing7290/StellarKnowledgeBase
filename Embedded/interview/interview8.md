@@ -1,4 +1,13 @@
-# linux 
+# linux
+
+面试题网友：<https://www.nowcoder.com/search?type=blog&order=time&query=c%E9%9D%A2%E8%AF%95%E9%A2%98&subType=0&page=2>
+
+1、linux C/C++服务器后台开发面试题总结：<https://blog.nowcoder.net/n/af8d82993ace4931a04a5fec769aab99>
+
+2、常见C++笔试面试题总结（三）：<https://blog.nowcoder.net/n/39feafe8ee73402fa6eb7b0c008f1a84>
+3、<https://www.nowcoder.com/studypath/codingCamp>
+
+## linux相关
 
 1、linux启动流程：
 >(1)加载BIOS
@@ -220,6 +229,8 @@ void bubble_sort(int a[], int n)
 <https://blog.csdn.net/guoweimelon/article/details/50902597>
 <http://c.biancheng.net/cpp/html/2443.html>
 
+## uboot
+
 1、线程中有哪些同步机制？
 (1)互斥锁
 (2)条件变量
@@ -235,7 +246,7 @@ void bubble_sort(int a[], int n)
 2、uboot的启动流程：
 
 >第一阶段:
->         硬件初始化
+>        硬件初始化
 >       为加载的bootloader准备RAM空间
 >       复制代码到第二阶段RAM空间
 >       设置栈
@@ -274,3 +285,220 @@ void bubble_sort(int a[], int n)
 <https://zhuanlan.zhihu.com/p/108822858>
 
 <https://zhuanlan.zhihu.com/p/76023663>
+
+## 虚拟内存
+
+1、分段机制：
+(1)什么是分段机制？
+分段机制就是把虚拟地址空间（也叫逻辑地址空间）中的虚拟内存组织成一些长度可变的称为段的内存块单元。
+
+(2)什么是段？
+每个段由三个参数定义：段基地址、段限长、段属性。
+段的基地址、段限长以及段的保护属性存储在一个称为段描述符的结构项中
+
+(3)段的作用?
+段可以用来存放程序的代码、数据、堆栈、或者用来存放系统数据结构
+
+(4)段的存储地址？
+系统中所有使用的段包括在处理器线性地址空间中。
+
+(5)段选择符?
+逻辑地址包含一个段选择符和一个偏移量，段选择符是一个段的唯一标识，它提供了段描述符表，段描述符表指明段的大小和类型、访问权限和段的特权级、以及
+段的第一个字节在线性地址空间中的位置（称为段的基地址）；逻辑地址的偏移量部分到段的基地址上就可以定位段中某个字节的位置。
+因此基地址加上偏移量就形成了处理器线性地址空间中的地址
+
+2、分页机制：
+
+（1）什么是分页机制？
+分页机制在分段机制之后进行的，它是进一步把线性地址转换成物理地址。
+
+(2)分页机制的存储？
+分页机制支持虚拟存储技术，在使用虚拟存储的环境中，大容量的线性地址空间需要使用小块的物理内存(RAM或者ROM）以及某些外部存储空间来模拟
+；当使用分页时，每个段被划分成页面（通常每页为4K大小），页面为被存储于物理内存中或者硬盘中。操作系统通过维护一个页目录和一些页表来留意这些页面
+；当程序试图访问线性地址空间中的一个地址位置时，处理器就会使用页目录和页表把线性地址转换成一个物理地址，然后在该内存位置上执行所要的操作。
+
+(3)分段机制与分页机制的区别？
+
+--分页机制会使用固定的内存块大小，而分段机制使用大小可变的块内存大小.
+
+--分页使用固定大小的块更适合管理物理内存，而分段机制使用大小可变的块更适合处理复杂系统的逻辑分区
+
+--段表存储存储在线性地址空间，而页表则保存在物理地址空间
+
+注:具体过程实现可以看<深入理解计算机操作系统>和<linux内核完全注释>这两本书
+
+## 字符串操作
+
+1，字符串翻转
+实现逻辑，就是将字符串从中间一分为二，互相换位置即完成了翻转的效果
+
+```c
+    void rechange_str(char *str)
+    {
+        int i, len;
+        char tmp;
+        if (NULL == str) {
+            return ;
+        }
+        len = strlen(str);
+        for (i = 0; i < len/2; i ++) {
+            tmp = str[i];
+            str[i] = str[len-i-1];
+            str[len-i-1] = tmp;
+        }
+    }
+```
+
+2，整型转字符串
+实现逻辑，每个整数看其转换进制，从个位到十位百位都可以通过%操作加上/操作获得，再用一个字符数组保存0-F,用个位数对应值转为字符，
+注意转换出的字符串是反向的,还要考虑传入的若是负数如何处理，再用翻转字符串完成最后整个操作
+
+```c
+char *sky_itoa(int value, char *str, unsigned int radix)
+{
+    char list[] = "0123456789ABCDEF";
+    unsigned int tmp_value;
+    int i, j, k;
+    if (NULL == str) {
+        return NULL;
+    }
+    if (2 != radix && 8 != radix && 10 != radix && 16 != radix) {
+        return NULL;
+    }
+    i = 0;
+    k = 0;
+    if (radix == 10 && value < 0) {
+        tmp_value = (unsigned int)(0 - value);
+        str[i++] = '-';
+        k = 1;
+    } else {
+        tmp_value = (unsigned int)value;
+    }
+    do {
+        str[i++] = list[tmp_value%radix];
+        tmp_value /= radix;
+    } while(tmp_value);
+    str[i] = '\0';
+    //翻转
+    char tmp;
+    for (j = k; j < (i+k)/2; j++) {
+        tmp = str[j];
+        str[j] = str[i+k-j-1];
+        str[i+k-j-1] = tmp;
+    }
+    return str;
+}
+```
+
+3，字符串复制
+实现逻辑，逐个赋值直到遇到'\0'停止即可
+
+```C
+char *sky_strcpy(char *dst, const char *str)
+{
+    if (NULL == dst ||  NULL == str) {
+        return NULL;
+    }
+    char *ret = dst;
+    while (*str != '\0') {
+        *dst ++ = *str ++;
+    }
+    return ret;
+}
+```
+
+4，字符串比较
+1）正常比较是否相同
+
+实现逻辑，判断字符串长度是否相同，若相同逐个比较字符是否相同
+
+```c
+    int sky_strcmp(char *dst, char *str)
+    {
+        int i, len;
+        if (NULL == dst || NULL == str) {
+            return 0;
+        }
+        if (strlen(dst) != strlen(str)) {
+            return 0;
+        }
+        len = strlen(dst);
+        for (i = 0; i < len; i++) {
+            if (*dst++ != *str++) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+```
+
+2）忽略大小写字符串比较
+实现逻辑，在比较字符时可以将其统一转换为大写或小写，然后再进行比对即可，和正常对比无其他不同
+
+```C
+#define CONVERT(c) (((c) >= 'A' && (c) <= 'Z') ? ((c) - 'A' + 'a') : (c))
+int sky_strcmp(char *dst, char *str)
+{
+    int i, len;
+    if (NULL == dst || NULL == str) {
+        return 0;
+    }
+    if (strlen(dst) != strlen(str)) {
+        return 0;
+    }
+    len = strlen(dst);
+    for (i = 0; i < len; i++) {
+        if (CONVERT(*dst) != CONVERT(*str)) {
+            return 0;
+        }
+        dst ++;
+        str ++;
+    }
+    return 1;
+}
+```
+
+5，memcpy函数实现
+实现逻辑，主要就是逐个赋值即可完成
+1)不考虑拷贝覆盖问题
+
+```c
+void *sky_memecpy(void *dst, const void *str, int n)
+{
+    if (NULL == dst || NULL == str || n <= 0) {
+        return NULL;
+    }
+    char *pdst = (char *)dst;
+    char *pstr = (char *)str;
+    while (n --) {
+        *pdst ++ = *pstr ++;
+    }
+    return dst;
+}
+```
+
+2）考虑拷贝覆盖问题
+
+```c
+void *sky_memecpy(void *dst, const void *str, int n)
+{
+    if (NULL == dst || NULL == str || n <= 0) {
+        return NULL;
+    }
+    char *pdst = (char *)dst;
+    char *pstr = (char *)str;
+        
+    if (pdst > pstr && pdst < pstr + n) {
+        pdst = pdst + n - 1;
+        pstr = pstr + n - 1;
+        while (n --) {
+            *pdst -- = *pstr --;
+        }
+    } else {
+        while (n --) {
+            *pdst ++ = *pstr ++;
+        }
+    }
+    return dst;
+}
+```

@@ -20,6 +20,8 @@
 
 10. [示例](/Embedded/interview/interview9.md)
 
+11. [示例](/Embedded/interview/interview10.md)
+
 <!-- tabs:start -->
 
 #### **English**
