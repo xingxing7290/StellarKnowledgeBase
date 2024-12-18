@@ -66,13 +66,13 @@ unsigned int 声明数据类型为无符号整型
 (volatile unsigned int *)强制转化数据类型
 (0x40010c00+0xc0)存储的地址，寄存器地址
 
-![alt text](image.png)
+![alt text](img/image.png)
 
 ## 函数指针
 
-![alt text](image-1.png)
+![alt text](img/image-1.png)
 
-![alt text](image-2.png)
+![alt text](img/image-2.png)
 
 """
 //加法函数
@@ -116,13 +116,13 @@ int main(void)
 
 ## 链表
 
-![链表与数组](image-3.png)
-![链表](image-4.png)
-![插入元素](image-5.png)
-![定义节点与链表](image-6.png)
-![初始化节点与链表](image-7.png)
-![插入节点](image-8.png)
-![删除节点](image-9.png)
+![链表与数组](img/image-3.png)
+![链表](img/image-4.png)
+![插入元素](img/image-5.png)
+![定义节点与链表](img/image-6.png)
+![初始化节点与链表](img/image-7.png)
+![插入节点](img/image-8.png)
+![删除节点](img/image-9.png)
 
 ## 扩展_指针与变量
 
@@ -133,11 +133,11 @@ volatile 防止声明变量没使用直接被优化了
 ### arm架构与汇编简明教程
 
     硬件结构
-![alt text](image-10.png)
+![alt text](img/image-10.png)
         test.c->编译器->test.zxf/test.bin/test.hex->烧写->flash
-![alt text](image-11.png)
+![alt text](img/image-11.png)
     CPU 寄存器
-![alt text](image-12.png)
+![alt text](img/image-12.png)
     ARM汇编
      读 load LDR   LDR R0,[ADDA] RO源，读地址 将地址数据读到ro中去
      写 store STR  STR RO,[ADDA] 将ro数据写导地址中去
@@ -179,15 +179,15 @@ int mymian()
 栈的使用图：
 栈是程序员自己制定的内存，内存的最上面是栈低，然后向下入栈。内存的最下面是给全局和静态变量使用。
 BL 跳转指令 branch and link
-![alt text](image-13.png)
-![alt text](image-14.png)
+![alt text](img/image-13.png)
+![alt text](img/image-14.png)
 局部变量回收：推出的时候，退栈 回收空间。
-![alt text](image-15.png)
+![alt text](img/image-15.png)
 
 ***全局变量***
 最开始没有指令初始化他们，
 如果向局部变量一样初始化他们，会造成大量资源浪费
-![alt text](image-16.png)
+![alt text](img/image-16.png)
 在main函数之前，需要先运行一个copy函数，将flash中的全局变量copy到内存中去。
 那么问题，复制到内存哪里？
 全局变量由系统和编译器分配
@@ -195,7 +195,7 @@ keil中连接器linker指定了flash和内存地址
 全局变量由链接器中的参数决定的  -ro-base 0x08000000(flash)  -rw-base 0x02000000(内存)
 
 静态变量是分配与使用和全局变量是完全一样的。
-![alt text](image-17.png)
+![alt text](img/image-17.png)
 
 BL copy :data端
 BL setzero :zi端
@@ -217,10 +217,10 @@ strcpy(str ,"123");
 free(str);
 ```
 
-![alt text](image-18.png)
+![alt text](img/image-18.png)
 
 freertos中的堆就是申请了一块巨大的内存去使用。
-![alt text](image-19.png)
+![alt text](img/image-19.png)
 
 \\192.168.1.20\ims\嵌入式文档\韦东山90天双系统\3--【项目1】02_环境搭建及C语言基础\20--[视频]直播公开课_09_答疑.mp4 未看
 
@@ -244,7 +244,7 @@ freertos中的堆就是申请了一块巨大的内存去使用。
 
 - 声明结构体类型：会占用内存吗？
   
-![alt text](image-20.png)
+![alt text](img/image-20.png)
 
 - 结构体里的成员
     里面的成员如何排序
@@ -277,8 +277,8 @@ struct dog {
 
 ```
 
-![alt text](image-22.png)
-![alt text](image-21.png)
+![alt text](img/image-22.png)
+![alt text](img/image-21.png)
 
 位域
 
@@ -295,4 +295,32 @@ abc.age=1;
 
 ```
 
-![alt text](image-23.png)
+![alt text](img/image-23.png)
+
+### 头文件的作用
+
+![alt text](img/e89dbe20-e2a2-1268-be80-8f796be2bca3.jpg)
+
+防止多重定义
+
+```C++
+#ifndef _DOG_H
+#define _DOG_H
+
+#endif
+```
+
+### 指针本质
+
+### 使用指针访问硬件
+
+```C++
+int *p;
+p=(int *)0x40001000
+*p=123;
+```
+
+![alt text](./img/image-24.png)
+![alt text](./img/image-26.png)
+![alt text](./img/image-25.png)
+
