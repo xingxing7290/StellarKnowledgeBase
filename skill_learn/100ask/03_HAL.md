@@ -47,3 +47,28 @@ I2C传输数据格式
     ![alt text](image-16.png)
     避免主从两端同时控制避免烧机
     ![alt text](image-17.png)
+I2C底层驱动
+    ![alt text](image-18.png)
+    ![alt text](image-19.png)
+    ![alt text](image-20.png)
+SSD1306的I2C数据格式和显存访问
+   ![alt text](image-21.png)
+   ![alt text](image-22.png)
+   ![alt text](image-23.png)
+   ![alt text](image-24.png)
+   ![alt text](image-25.png)
+显示器驱动开发与显示应用
+
+## 串口通信
+
+   ![alt text](image-26.png)
+   基本概念
+   ![alt text](image-27.png)
+   ![alt text](image-28.png)
+   ![alt text](image-29.png)
+   ![alt text](image-30.png)
+   ![alt text](image-31.png)
+   ![alt text](image-32.png)
+   ![alt text](image-33.png)
+   ![alt text](image-34.png)
+   ![alt text](image-35.png)
